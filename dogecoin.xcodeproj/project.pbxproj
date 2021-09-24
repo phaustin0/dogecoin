@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		924577E226FDDDEE000521ED /* dogecoinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577E126FDDDEE000521ED /* dogecoinApp.swift */; };
-		924577E426FDDDEE000521ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577E326FDDDEE000521ED /* ContentView.swift */; };
+		924577E426FDDDEE000521ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577E326FDDDEE000521ED /* HomeView.swift */; };
 		924577E626FDDDEF000521ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924577E526FDDDEF000521ED /* Assets.xcassets */; };
 		924577E926FDDDEF000521ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924577E826FDDDEF000521ED /* Preview Assets.xcassets */; };
+		924577F526FDDFB1000521ED /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577F426FDDFB1000521ED /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		924577DE26FDDDEE000521ED /* dogecoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogecoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924577E126FDDDEE000521ED /* dogecoinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogecoinApp.swift; sourceTree = "<group>"; };
-		924577E326FDDDEE000521ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		924577E326FDDDEE000521ED /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		924577E526FDDDEF000521ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924577E826FDDDEF000521ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		924577F426FDDFB1000521ED /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,12 @@
 		924577E026FDDDEE000521ED /* dogecoin */ = {
 			isa = PBXGroup;
 			children = (
+				924577F326FDDF9C000521ED /* Utilities */,
+				924577F226FDDF2A000521ED /* Services */,
+				924577F126FDDF22000521ED /* Models */,
+				924577F026FDDF1C000521ED /* ViewModels */,
+				924577EF26FDDEE2000521ED /* Views */,
 				924577E126FDDDEE000521ED /* dogecoinApp.swift */,
-				924577E326FDDDEE000521ED /* ContentView.swift */,
 				924577E526FDDDEF000521ED /* Assets.xcassets */,
 				924577E726FDDDEF000521ED /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				924577E826FDDDEF000521ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		924577EF26FDDEE2000521ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				924577E326FDDDEE000521ED /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		924577F026FDDF1C000521ED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		924577F126FDDF22000521ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		924577F226FDDF2A000521ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		924577F326FDDF9C000521ED /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				924577F426FDDFB1000521ED /* NetworkingManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924577E426FDDDEE000521ED /* ContentView.swift in Sources */,
+				924577F526FDDFB1000521ED /* NetworkingManager.swift in Sources */,
+				924577E426FDDDEE000521ED /* HomeView.swift in Sources */,
 				924577E226FDDDEE000521ED /* dogecoinApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +319,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -287,7 +332,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +350,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -317,7 +363,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
