@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var vm: HomeViewModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(vm.posts) { post in
+                    Text(post.submissionTitle ?? "")
+                }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(dev.vm)
     }
 }

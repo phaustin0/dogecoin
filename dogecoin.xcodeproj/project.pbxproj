@@ -14,6 +14,8 @@
 		924577F526FDDFB1000521ED /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577F426FDDFB1000521ED /* NetworkingManager.swift */; };
 		924577F726FDE218000521ED /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577F626FDE218000521ED /* DownloadService.swift */; };
 		924577F926FDE288000521ED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577F826FDE288000521ED /* Post.swift */; };
+		924577FB26FDE3D0000521ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577FA26FDE3D0000521ED /* HomeViewModel.swift */; };
+		924577FE26FDE582000521ED /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577FD26FDE582000521ED /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		924577F426FDDFB1000521ED /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		924577F626FDE218000521ED /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		924577F826FDE288000521ED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		924577FA26FDE3D0000521ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		924577FD26FDE582000521ED /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		924577E026FDDDEE000521ED /* dogecoin */ = {
 			isa = PBXGroup;
 			children = (
+				924577FC26FDE578000521ED /* Extensions */,
 				924577F326FDDF9C000521ED /* Utilities */,
 				924577F226FDDF2A000521ED /* Services */,
 				924577F126FDDF22000521ED /* Models */,
@@ -88,6 +93,7 @@
 		924577F026FDDF1C000521ED /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				924577FA26FDE3D0000521ED /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				924577F426FDDFB1000521ED /* NetworkingManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		924577FC26FDE578000521ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				924577FD26FDE582000521ED /* PreviewProvider.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				924577F526FDDFB1000521ED /* NetworkingManager.swift in Sources */,
+				924577FB26FDE3D0000521ED /* HomeViewModel.swift in Sources */,
 				924577F726FDE218000521ED /* DownloadService.swift in Sources */,
 				924577E426FDDDEE000521ED /* HomeView.swift in Sources */,
 				924577E226FDDDEE000521ED /* dogecoinApp.swift in Sources */,
+				924577FE26FDE582000521ED /* PreviewProvider.swift in Sources */,
 				924577F926FDE288000521ED /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
