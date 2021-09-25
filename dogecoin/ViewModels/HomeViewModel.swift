@@ -11,7 +11,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var posts: [Post] = []
     private var postDownloadService = DownloadService<AllData>()
-    private var cancellables: AnyCancellable?
+    private var postSubscription: AnyCancellable?
     
     init() {
         getPosts()
@@ -20,12 +20,10 @@ class HomeViewModel: ObservableObject {
     private func getPosts() {
         guard let url = URL(string: "https://api.doge-meme.lol/v1/memes/?skip=0&limit=100") else { return }
         
-        cancellables = postDownloadService.downloadAndDecode(url: url) { [weak self] returnedAllData in
-            guard
-                let self = self,
-                let returnedPosts = returnedAllData.data
-            else { return }
-            self.posts = returnedPosts
+        postSubscription = postDownloadService.downloadAndDecode(url: url) { [weak self] returnedAllData in
+            guard let self = self else { return }
+            self.posts = returnedAllData.data
+            self.postSubscription?.cancel()
         }
     }
 }

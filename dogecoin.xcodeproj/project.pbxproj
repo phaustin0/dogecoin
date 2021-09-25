@@ -16,6 +16,11 @@
 		924577F926FDE288000521ED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577F826FDE288000521ED /* Post.swift */; };
 		924577FB26FDE3D0000521ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577FA26FDE3D0000521ED /* HomeViewModel.swift */; };
 		924577FE26FDE582000521ED /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924577FD26FDE582000521ED /* PreviewProvider.swift */; };
+		92E9B49126FDE71F00203D7A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B49026FDE71F00203D7A /* PostView.swift */; };
+		92E9B49A26FE9D4C00203D7A /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B49926FE9D4C00203D7A /* PostImageView.swift */; };
+		92E9B49C26FEA01900203D7A /* PostImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B49B26FEA01900203D7A /* PostImageViewModel.swift */; };
+		92E9B49E26FEA07900203D7A /* PostImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B49D26FEA07900203D7A /* PostImageService.swift */; };
+		92E9B4A026FEAC4D00203D7A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E9B49F26FEAC4D00203D7A /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		924577F826FDE288000521ED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		924577FA26FDE3D0000521ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		924577FD26FDE582000521ED /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		92E9B49026FDE71F00203D7A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		92E9B49926FE9D4C00203D7A /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
+		92E9B49B26FEA01900203D7A /* PostImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageViewModel.swift; sourceTree = "<group>"; };
+		92E9B49D26FEA07900203D7A /* PostImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageService.swift; sourceTree = "<group>"; };
+		92E9B49F26FEAC4D00203D7A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				924577E326FDDDEE000521ED /* HomeView.swift */,
+				92E9B49026FDE71F00203D7A /* PostView.swift */,
+				92E9B49926FE9D4C00203D7A /* PostImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				924577FA26FDE3D0000521ED /* HomeViewModel.swift */,
+				92E9B49B26FEA01900203D7A /* PostImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				924577F626FDE218000521ED /* DownloadService.swift */,
+				92E9B49D26FEA07900203D7A /* PostImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -126,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				924577FD26FDE582000521ED /* PreviewProvider.swift */,
+				92E9B49F26FEAC4D00203D7A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,9 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				924577F526FDDFB1000521ED /* NetworkingManager.swift in Sources */,
+				92E9B49A26FE9D4C00203D7A /* PostImageView.swift in Sources */,
 				924577FB26FDE3D0000521ED /* HomeViewModel.swift in Sources */,
+				92E9B49126FDE71F00203D7A /* PostView.swift in Sources */,
 				924577F726FDE218000521ED /* DownloadService.swift in Sources */,
+				92E9B49E26FEA07900203D7A /* PostImageService.swift in Sources */,
 				924577E426FDDDEE000521ED /* HomeView.swift in Sources */,
+				92E9B4A026FEAC4D00203D7A /* String.swift in Sources */,
+				92E9B49C26FEA01900203D7A /* PostImageViewModel.swift in Sources */,
 				924577E226FDDDEE000521ED /* dogecoinApp.swift in Sources */,
 				924577FE26FDE582000521ED /* PreviewProvider.swift in Sources */,
 				924577F926FDE288000521ED /* Post.swift in Sources */,
@@ -346,7 +366,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +397,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

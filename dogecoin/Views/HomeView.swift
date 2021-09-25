@@ -14,7 +14,7 @@ struct HomeView: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 ForEach(vm.posts) { post in
-                    Text(post.submissionTitle ?? "")
+                    PostView(post: post)
                 }
             }
         }
