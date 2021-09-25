@@ -9,17 +9,30 @@ import SwiftUI
 
 struct PostView: View {
     let post: Post
+    let postURL: URL
+    
+    init(post: Post) {
+        self.post = post
+        guard let url = URL(string: "https://www.reddit.com\(post.permalink)") else {
+            self.postURL = URL(string: "https://www.reddit.com/404notfound")!
+            return
+        }
+        self.postURL = url
+    }
     
     var body: some View {
-        HStack(spacing: 15) {
-            PostImageView(post: post)
-                .frame(width: 70, height: 70)
-                .clipShape(Circle())
-            
-            textSection
+        Link(destination: postURL) {
+            HStack(spacing: 15) {
+                PostImageView(post: post)
+                    .frame(width: 70, height: 70)
+                    .clipShape(Circle())
+                
+                textSection
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .accentColor(.primary)
         }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
     }
 }
 
